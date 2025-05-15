@@ -115,6 +115,21 @@ if show_top_customers:
 )
 st.plotly_chart(fig_top, use_container_width=True)
 
+# === Daily Transaction Table ===
+if show_daily_transaction:
+    st.markdown("### 🏅 Daily Transaction ")
+    fig_trend = px.line(
+    daily_transactions,
+    x="TransactionDate",
+    y="TransactionAmount (INR)",
+    markers=True,
+    title="Daily Transaction Amount Trend"
+)
+st.plotly_chart(fig_trend, use_container_width=True)
+
+
+
+
 
 # === Segment Info Table ===
 if show_segment_table:
