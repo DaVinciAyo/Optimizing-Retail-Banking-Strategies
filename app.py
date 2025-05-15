@@ -29,7 +29,7 @@ with st.sidebar:
     show_segment_table = st.checkbox("Show Segment Info Table", value=True)
     show_lifecycle_pie = st.checkbox("Show Segment Lifecycle Pie", value=True)
     show_segment_composition = st.checkbox("Show Segment Composition Table", value=True)
-    show_top_customers = st.checkbox("Show Top Customers", value=True)
+    show_daily_transaction = st.checkbox("Show Daily Transaction Trend", value=True)
 
     st.markdown("---")
     st.caption("Optimized for performance • Mobile-compatible")
