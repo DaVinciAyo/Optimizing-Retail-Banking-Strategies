@@ -122,7 +122,7 @@ st.plotly_chart(fig_top, use_container_width=True)
 # === Daily Transaction Table ===
 if show_daily_transaction:
     st.markdown("### 🏅 Daily Transaction ")
-    daily_transactions = df.groupby('TransactionDate')['TransactionAmount (INR)'].sum().reset_index()
+    daily_transactions = df1.groupby('TransactionDate')['TransactionAmount (INR)'].sum().reset_index()
     fig_trend = px.line(
     daily_transactions,
     x="TransactionDate",
