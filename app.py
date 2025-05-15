@@ -43,11 +43,10 @@ st.markdown("Segment and prioritize customers based on **Recency**, **Frequency*
 
 # === KPIs ===
 st.markdown("### 📈 Customer Snapshot")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3= st.columns(3)
 col1.metric("Total Customers", len(filtered_df))
-col2.metric("Avg. Recency", f"{filtered_df['Recency'].mean():.1f} days")
-col3.metric("Avg. Frequency", f"{filtered_df['Frequency'].mean():.1f} txns")
-col4.metric("Avg. Monetary", f"₹{filtered_df['Monetary'].mean():,.0f}")
+col2.metric("Avg. Frequency", f"{filtered_df['Frequency'].mean():.1f} txns")
+col3.metric("Monetary", f"{filtered_df['Monetary'].sum():,.0f}")
 
 # === Cluster Size Bar Chart ===
 if show_cluster_distribution:
