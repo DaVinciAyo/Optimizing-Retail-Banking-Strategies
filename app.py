@@ -10,8 +10,10 @@ st.set_page_config(page_title="BankTrust RFM Dashboard", layout="wide", initial_
 @st.cache_data
 def load_data():
     return pd.read_csv("output/rfm_segmented.csv")
-
+def load_data1():
+    return pd.read_csv("output/cleaned_data.csv")
 df = load_data()
+df1= load_data1()
 
 # === Sidebar ===
 with st.sidebar:
